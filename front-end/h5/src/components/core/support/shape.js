@@ -95,7 +95,7 @@ export default {
         pos.width = newWidth > 0 ? newWidth : 0
         pos.left = newWidth > 0 ? +left + (hasL ? disX : 0) : pos.left
         pos.top = newHeight > 0 ? +top + (hasT ? disY : 0) : pos.top
-        this.handlePointMoveProp(pos,point)
+        this.handlePointMoveProp(pos, point)
       }
       let up = () => {
         this.handlePointMouseUpProp()
