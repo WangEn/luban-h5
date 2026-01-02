@@ -39,7 +39,7 @@ export default {
       padding: '0 5px'
     }
     return <input
-      disabled={this.disabled}
+      readonly={this.disabled}
       type={this.type}
       style={style}
       name={this.name}
@@ -61,7 +61,8 @@ export default {
     borderColor: PropTypes.color({ label: '边框颜色', defaultValue: '#ced4da' }),
     textAlign: PropTypes.textAlign({ defaultValue: 'left' }),
     vertical: PropTypes.boolean(),
-    lineHeight: PropTypes.number({ label: '行高(px)', defaultValue: 1 })
+    lineHeight: PropTypes.number({ label: '行高(px)', defaultValue: 1 }),
+    editorMode: PropTypes.string({ defaultValue: 'edit', label: '编辑模式', visible: false })
   }
 }
 
