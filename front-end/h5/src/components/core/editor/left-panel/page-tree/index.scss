@@ -1,0 +1,30 @@
+.tree-node-content {
+  display: flex;
+//   align-items: center;
+//   gap: 8px;
+//   width: 100%;
+}
+
+.tree-node-label {
+//   flex-shrink: 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.65);
+  min-width: 80px;
+}
+
+.tree-node-preview {
+//   flex: 1;
+  min-width: 140px;
+//   overflow: hidden;
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   max-width: 200px;
+  height: 30px;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+  padding: 2px;
+  background: #fafafa;
+  font-size: 11px !important;
+}
+

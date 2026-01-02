@@ -1,6 +1,6 @@
 import RenderShortcutsPanel from './shortcuts-panel/index'
 import RenderPageManager from './page-manager/index'
-import RenderPageTree from './page-tree/index'
+import RenderPageTree from './page-tree/index.js'
 import RenderPagePreferences from './preferences/index'
 import RenderDataSourcePanel from 'core/editor/data-source/index.js'
 
