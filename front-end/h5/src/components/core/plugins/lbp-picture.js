@@ -4,7 +4,7 @@ import placeholderImg from './lbp-picture-placeholder.png' // issue #34
 export default {
   name: 'lbp-picture',
   render () {
-    return <img src={this.imgSrc || placeholderImg} style={{ objectFit: this.fillType }} alt="" srcset="" width="100%" />
+    return <img src={this.imgSrc || placeholderImg} style={{ objectFit: this.fillType }} alt="" srcset="" width="100%" draggable={false} />
   },
   props: {
     imgSrc: PropTypes.image(),

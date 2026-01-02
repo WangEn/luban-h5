@@ -76,7 +76,7 @@ export default {
       <div class="lbc-video" style={style}>
         {
           this.useIframe
-            ? <div ref="iframeWrapper"><img src={playIcon} width="100%" height="100%" /></div>
+            ? <div ref="iframeWrapper"><img src={playIcon} width="100%" height="100%" draggable={false} /></div>
             : <video playsinline="true" webkit-playsinline="" width="100%" height="100%" poster={playIcon} ref="videoTag" controls>
               <source type="video/mp4" src={this.src} />
             </video>

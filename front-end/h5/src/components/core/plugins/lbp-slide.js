@@ -64,11 +64,11 @@ export default {
     const { items, activeIndex } = this
     return (
       this.editorMode === 'edit'
-        ? items.length && <img src={items[activeIndex].image} />
+        ? items.length && <img src={items[activeIndex].image} draggable={false} />
         : <Swipe autoplay={+this.interval} indicator-color="red">
           {
             items.map(item => (
-              <SwipeItem><img src={item.image} width="100%" height="100%" /></SwipeItem>
+              <SwipeItem><img src={item.image} width="100%" height="100%" draggable={false} /></SwipeItem>
             ))
           }
         </Swipe>
