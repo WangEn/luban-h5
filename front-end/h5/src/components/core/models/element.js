@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { parsePx, guid } from '@/utils/element.js'
+import { parsePx, guid, getPureDomText } from '@/utils/element.js'
 import { bindData } from '@/utils/data-binding.js'
 
 // #! 编辑状态，不可以点击的按钮，因为点击按钮会触发一些默认动作，比如表单提交等
@@ -214,8 +214,13 @@ export default class Element {
     return style
   }
 
-  getProps ({ mode = 'edit' } = {}) {
+  getProps ({ mode = 'edit', previewPureText = false } = {}) {
     const pluginProps = mode === 'preview' ? bindData(this.pluginProps, window) : this.pluginProps
+    // #!zh: 获取纯文本的原因：方便在组件树状态展示文本元素内容，如果直接展示，可能会是一个富文本
+    // #!en: Get pure text reason: To display the text element content in the component tree state, if displayed directly, it may be a rich text
+    if (this.name === 'lbp-text' && previewPureText) {
+      pluginProps.text = getPureDomText(pluginProps.text || '')
+    }
     return {
       ...pluginProps,
       disabled: disabledPluginsForEditMode.includes(this.name) && mode === 'edit'

@@ -112,6 +112,12 @@ export const mutations = {
         const swapElement = elements.find(ele => ele.commonStyle.zindex === eleZindex + flag * 1)
         swapZindex(editingElement, swapElement)
         break
+      case 'reOrder':
+        // 重新排序元素（用于拖拽排序）
+        // value: { newElements: Array<Element> }
+        const { newElements } = value
+        state.editingPage.elements = newElements
+        break
       default:
     }
   },

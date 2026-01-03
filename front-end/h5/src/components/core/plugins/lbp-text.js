@@ -38,7 +38,7 @@ export default {
      * 比如编辑模式 h1 样式为：.ql-snow .ql-editor h1 {font-size: 2em;}
      * 因此预览模式的文字内容也需要加上 div.ql-snow > div.ql-editor 作为wrapper
      */
-    const previewText = <div class="ql-snow"><div domPropsInnerHTML={this.text} class="ql-editor ql-container"></div></div>
+    const previewText = <div><div domPropsInnerHTML={this.text}></div></div>
     return (
       <div
         onDblclick={e => {

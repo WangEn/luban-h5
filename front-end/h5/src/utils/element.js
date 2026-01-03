@@ -81,3 +81,11 @@ function S4 () {
 export function guid () {
   return (S4() + S4() + '-' + S4() + '-' + S4() + '-' + S4() + '-' + S4() + S4() + S4())
 }
+
+export function getPureDomText (text) {
+  // return text.replace(/<[^>]*>?/g, '')
+  const textDom = document.createElement('div')
+  textDom.innerHTML = text
+  // console.log('textDom', textDom.textContent || textDom.innerText || '')
+  return textDom.textContent || textDom.innerText || ''
+}
